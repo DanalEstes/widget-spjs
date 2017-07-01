@@ -753,6 +753,7 @@ chilipeppr.publish("/com-chilipeppr-widget-serialport/send", "G1 X10 F500\\n");
             
         },
         consoleClear: function() {
+            var log = this.logEls.log;
             log.html("");
         },        
         statusToggle: function() {
