@@ -697,6 +697,7 @@ chilipeppr.publish("/com-chilipeppr-widget-serialport/send", "G1 X10 F500\\n");
             });
             $('#com-chilipeppr-widget-serialport-tbar-showhideconsole').click(
                 this.consoleToggle.bind(this)
+            );
             $('#com-chilipeppr-widget-serialport-tbar-clearconsole').click(
                 this.consoleClear.bind(this)
             );

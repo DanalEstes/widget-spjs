@@ -909,6 +909,9 @@ chilipeppr.publish("/com-chilipeppr-widget-serialport/send", "G1 X10 F500\\n");
             $('#com-chilipeppr-widget-serialport-tbar-showhideconsole').click(
                 this.consoleToggle.bind(this)
             );
+            $('#com-chilipeppr-widget-serialport-tbar-clearconsole').click(
+                this.consoleClear.bind(this)
+            );
             $('#com-chilipeppr-widget-serialport-tbar-showhidestatus').click(
                 this.statusToggle.bind(this)
             );
@@ -960,6 +963,9 @@ chilipeppr.publish("/com-chilipeppr-widget-serialport/send", "G1 X10 F500\\n");
             }
             
         },
+        consoleClear: function() {
+            log.html("");
+        },        
         statusToggle: function() {
             var stat = $('.com-chilipeppr-widget-serialport-status');
             if (stat.hasClass('hidden')) {
@@ -2897,6 +2903,7 @@ chilipeppr.publish("/com-chilipeppr-widget-serialport/send", "G1 X10 F500\\n");
                 <ul class="dropdown-menu" role="menu">
                     <li class=""><a href="javascript:" id="com-chilipeppr-widget-serialport-tbar-disconws">Connect to Alternate Host/IP</a></li>
                     <li><a href="javascript:" id="com-chilipeppr-widget-serialport-tbar-showhideconsole">Show / Hide Console</a></li>
+                    <li><a href="javascript:" id="com-chilipeppr-widget-serialport-tbar-clearconsole">Clear Console</a></li>
                     <!-- <li><a href="javascript:" id="com-chilipeppr-widget-serialport-tbar-showhidestatus">Show / Hide Status</a></li> -->
                     <li class="divider"></li>
                     <li class="hidden"><a href="javascript:" id="com-chilipeppr-widget-serialport-tbar-disconws">Disconnect</a></li>
