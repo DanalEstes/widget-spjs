@@ -697,6 +697,8 @@ chilipeppr.publish("/com-chilipeppr-widget-serialport/send", "G1 X10 F500\\n");
             });
             $('#com-chilipeppr-widget-serialport-tbar-showhideconsole').click(
                 this.consoleToggle.bind(this)
+            $('#com-chilipeppr-widget-serialport-tbar-clearconsole').click(
+                this.consoleClear.bind(this)
             );
             $('#com-chilipeppr-widget-serialport-tbar-showhidestatus').click(
                 this.statusToggle.bind(this)
@@ -749,6 +751,9 @@ chilipeppr.publish("/com-chilipeppr-widget-serialport/send", "G1 X10 F500\\n");
             }
             
         },
+        consoleClear: function() {
+            log.html("");
+        },        
         statusToggle: function() {
             var stat = $('.com-chilipeppr-widget-serialport-status');
             if (stat.hasClass('hidden')) {
